@@ -21,8 +21,8 @@ public class AvailableFoodsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ListView listView = (ListView) getActivity().findViewById(R.id.available_foods_listView);
-        CustomListAdapter adapter = new CustomListAdapter();
-        listView.setAdapter(adapter);
+        //CustomListAdapter adapter = new CustomListAdapter();
+        //listView.setAdapter(adapter);
 
         new FetchAvailableFoodsFromDBTask().execute();
 

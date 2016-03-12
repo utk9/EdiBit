@@ -19,7 +19,9 @@ public class Application extends android.app.Application {
     public static ArrayList<FoodItem> foodItemsList;
 
     public Application(){
+
         super();
+        foodItemsList = new ArrayList<FoodItem>();
     }
 
     @Override
