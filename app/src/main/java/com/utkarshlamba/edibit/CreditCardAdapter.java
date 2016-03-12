@@ -14,6 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by Jeffrey on 2016-03-12.
  */
+
 public class CreditCardAdapter extends RecyclerView.Adapter<CreditCardAdapter.ViewHolder>{
 
 
