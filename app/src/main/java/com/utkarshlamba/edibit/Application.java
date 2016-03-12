@@ -2,6 +2,8 @@ package com.utkarshlamba.edibit;
 
 import android.os.AsyncTask;
 
+import java.util.ArrayList;
+
 import io.triangle.Session;
 
 /**
@@ -14,8 +16,12 @@ public class Application extends android.app.Application {
     private final String ACCESS_KEY = "SBG1XkubQT";
     private final String SECRET_KEY = "o3f538fEYQyNpdE0iAILJsc3fBRr03rnFaA2nV70L8ZOl5ctmW2Us4aVRcQrhNEU";
 
+    public static ArrayList<FoodItem> foodItemsList;
+
     public Application(){
+
         super();
+        foodItemsList = new ArrayList<FoodItem>();
     }
 
     @Override

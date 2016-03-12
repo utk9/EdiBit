@@ -1,5 +1,6 @@
 package com.utkarshlamba.edibit;
 
+import android.app.Application;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
@@ -67,25 +68,30 @@ public class MainActivity extends AppCompatActivity {
 
         drawerList.setAdapter(drawerAdapter);
         drawerList.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        /*
+
         final FragmentManager fm = getFragmentManager();
-        fm.beginTransaction().replace(R.id.content_frame, new SearchItemFragment(pd)).commit();
+        fm.beginTransaction().replace(R.id.content_frame, new AvailableFoodsFragment()).commit();
+
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Fragment fragment = null;
+
                 if (position == 0) {
-                    fragment = new SearchItemFragment(pd);
-                    toolbarTitle.setText("Wikipedia");
+
+                    fragment = new AvailableFoodsFragment();
+                    //toolbarTitle.setText("Wikipedia");
                 } else if (position == 1) {
-                    fragment = new WolframAlphaSearchItemFragment(pd);
-                    toolbarTitle.setText("Wolfram Alpha");
+                    fragment = new PostFoodFragment();
+                    //toolbarTitle.setText("Wolfram Alpha");
                 } else if (position == 2) {
 
-                    fragment = new AskQuestionFragment(pd);
-                    toolbarTitle.setText("Ask Question");
-                } else {
+                    //Intent i = new Intent(getApplicationContext(), PaymentInfoActivity.class );
+                    //toolbarTitle.setText("Ask Question");
+                }
+                /**
+                else {
                     if (isNetworkAvailable()) {
                         fragment = new FAQFragment();
                         toolbarTitle.setText("Helpful Questions");
@@ -95,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.LENGTH_LONG).show();
                     }
                 }
+                 */
                 if (fragment != null) {
                     fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 }
@@ -102,16 +109,15 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawer(drawerList);
             }
         });
-*/
+
         Button toggleButton = (Button) findViewById(R.id.toggle_button);
         toggleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (drawerLayout.isDrawerOpen(Gravity.LEFT)){
+                if (drawerLayout.isDrawerOpen(Gravity.LEFT)) {
                     drawerLayout.closeDrawer(drawerList);
 
-                }
-                else{
+                } else {
                     drawerLayout.openDrawer(Gravity.LEFT);
                 }
 
