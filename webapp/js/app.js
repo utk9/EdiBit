@@ -35,6 +35,12 @@ $(document).ready(function(){
 				controller: 'InfoController',
 				controllerAs: 'info'
 			})
+			.state('upload', {
+				url: "/upload",
+				templateUrl: 'partial-upload.html',
+				controller: 'UploadController',
+				controllerAs: 'upload'
+			})
 			.state('contact', {
 				url: "/contact",
 				templateUrl: 'partial-contact.html'
@@ -70,4 +76,22 @@ $(document).ready(function(){
 		};
 		ic.init();
 	}]);
+
+	app.controller("UploadController", ['$http', function($http){
+		var uc = this;
+
+	}]);
+
 })();
+
+
+function readURL(input) {
+if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#preview')
+        .css('background-image', "url('" + e.target.result + "')");
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}

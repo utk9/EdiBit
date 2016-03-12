@@ -25,6 +25,11 @@ html, body {
 	padding: 15px;
 }
 
+.uploadDiv {
+	margin-top: 25px;
+	padding: 15px;
+}
+
 .img-food {
 	width: 60px;
 	height: 60px;
