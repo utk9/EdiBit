@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-6a0219b91e7c286e3afed620a1327eb6ee29a2f5.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-31e62d3ed94ef792d4ffba43b665c5f758a3c88c.jar" />
+    </item>
+
+</items>

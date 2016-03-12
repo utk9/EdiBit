@@ -1,9 +1,4 @@
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
-/build
 /captures
-/app/
 webapp/config_foodapp.php
