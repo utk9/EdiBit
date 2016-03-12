@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            android:background="#33CC33"/>
+
+        <TextView
+            android:id="@+id/description_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="description_title"
+            android:textSize="30dp"
+            android:textColor="#33CC33"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/description_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from description_user"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beef Lasagna with mozerella cheese, tomato sauce, carrots, and celery (description)"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/description_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created at description_time"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="1dp"/>
+        <TextView
+            android:id="@+id/description_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: $description_price"
+            android:padding="1dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/description_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact: description_contact"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/description_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tags: description_tags"
+            android:textSize="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="1dp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
