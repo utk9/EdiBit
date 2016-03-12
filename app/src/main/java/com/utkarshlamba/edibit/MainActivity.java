@@ -83,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new AvailableFoodsFragment();
                     //toolbarTitle.setText("Wikipedia");
                 } else if (position == 1) {
-                    fragment = new PostFoodFragment();
+                    //fragment = new PostFoodFragment();
+                    Intent i = new Intent(getApplicationContext(), PostFoodFragment.class);
+                    startActivity(i);
                     //toolbarTitle.setText("Wolfram Alpha");
                 } else if (position == 2) {
 
@@ -155,4 +157,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

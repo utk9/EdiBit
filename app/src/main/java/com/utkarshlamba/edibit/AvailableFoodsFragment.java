@@ -26,15 +26,6 @@ public class AvailableFoodsFragment extends Fragment {
 
         new FetchAvailableFoodsFromDBTask().execute();
 
-//        ListView listView = (ListView) getActivity().findViewById(R.id.faq_listView);
-//        adapter = new QuestionListAdapter(getActivity(),
-//                MainActivity.questionsList, MainActivity.answersList);
-//        listView.setAdapter(adapter);
-
-        //new FetchDataFromDBTask().execute();
-
-
-
     }
 
 
