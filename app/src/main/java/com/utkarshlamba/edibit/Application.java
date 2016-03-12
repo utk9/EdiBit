@@ -21,6 +21,7 @@ public class Application extends android.app.Application {
     public Application(){
 
         super();
+        foodItemsList = new ArrayList<>();
     }
 
     @Override
