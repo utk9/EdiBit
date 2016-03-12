@@ -1,5 +1,6 @@
 package com.utkarshlamba.edibit;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,8 +15,13 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+import io.triangle.reader.PaymentCard;
+import io.triangle.reader.ScanActivity;
 
-public class PaymentInfoAcitivity extends ActionBarActivity {
+
+public class PaymentInfoAcitivity extends Activity {
+
+    public static int TRIANGLE_REQUEST_CODE = 1000;
 
     RecyclerView cardRecyclerView;
     CreditCardAdapter cardAdapter;
@@ -70,11 +76,8 @@ public class PaymentInfoAcitivity extends ActionBarActivity {
 
     public void nfcClicked(View v){
         NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        boolean askingToEnableNfc = false;
 
-        if (nfcAdapter != null && !nfcAdapter.isEnabled())
-        {
-            askingToEnableNfc = true;
+        if (nfcAdapter != null && !nfcAdapter.isEnabled()){
 
             // Alert the user that NFC is off
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -102,11 +105,42 @@ public class PaymentInfoAcitivity extends ActionBarActivity {
         if (nfcAdapter != null && nfcAdapter.isEnabled())
         {
             // If no cards have been scanned so far, then automatically kick off a scan
-            
+            Intent scanIntent = new Intent(this,io.triangle.reader.ScanActivity.class);
+            scanIntent.putExtra(ScanActivity.INTENT_EXTRA_RETRY_ON_ERROR, true);
+            startActivityForResult(scanIntent,TRIANGLE_REQUEST_CODE);
         }
     }
 
     public void cameraClicked(View v){
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent){
+        if(requestCode == TRIANGLE_REQUEST_CODE){
+            if(resultCode == ScanActivity.RESULT_OK) {
+                PaymentCard scannedCard = intent.getParcelableExtra(ScanActivity.INTENT_EXTRA_PAYMENT_CARD);
+                if (scannedCard != null  && scannedCard.getExpiryDate() != null && scannedCard.getLastFourDigits() != null) {
+                    String exp = scannedCard.getExpiryDate().getMonth() + "/" + scannedCard.getExpiryDate().getYear();
+                    String number = "**** **** **** " + scannedCard.getLastFourDigits();
+                    String type = scannedCard.getCardBrand();
+
+                    String name = scannedCard.getCardholderName();
+                    cardAdapter.addCard(type, number, name, exp);
+                } else {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                    alertDialog.setMessage("Card brand or type not supported.  Please try another method");
+                    alertDialog.setNegativeButton("Ok", null);
+                    alertDialog.show();
+                 }
+            } else {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                alertDialog.setMessage("Card scan aborted");
+                alertDialog.setNegativeButton("Ok", null);
+                alertDialog.show();
+            }
+        }
+
 
     }
 }

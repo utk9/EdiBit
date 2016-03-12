@@ -86,22 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new PostFoodFragment();
                     //toolbarTitle.setText("Wolfram Alpha");
                 } else if (position == 2) {
+                    Intent intent = new Intent(view.getContext(), PaymentInfoAcitivity.class);
+                    startActivity(intent);
+                }
 
-                    //Intent i = new Intent(getApplicationContext(), PaymentInfoActivity.class );
-                    //toolbarTitle.setText("Ask Question");
-                }
-                /**
-                else {
-                    if (isNetworkAvailable()) {
-                        fragment = new FAQFragment();
-                        toolbarTitle.setText("Helpful Questions");
-                    } else {
-                        Toast.makeText(getApplicationContext(),
-                                "This feature is only available with an network connection",
-                                Toast.LENGTH_LONG).show();
-                    }
-                }
-                 */
                 if (fragment != null) {
                     fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 }
@@ -123,14 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        //REMOVE THIS
-        Intent intent = new Intent(this, PaymentInfoAcitivity.class);
-        startActivity(intent);
-
-
-
     }
 
     @Override
@@ -146,16 +126,6 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        /*
-        if (id == R.id.action_info) {
-            final FragmentManager fm = getFragmentManager();
-            Fragment fragment = new InfoFragment();
-            fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
-            return true;
-        }
-        */
 
         return super.onOptionsItemSelected(item);
     }

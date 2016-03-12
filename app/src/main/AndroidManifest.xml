@@ -23,9 +23,7 @@
             </intent-filter>
         </activity>
 
-        <application>
-            <activity android:name="io.triangle.reader.ScanActivity" />
-        </application>
+        <activity android:name="io.triangle.reader.ScanActivity" />
 
         <activity
             android:name=".PaymentInfoAcitivity"
