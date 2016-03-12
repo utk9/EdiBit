@@ -136,6 +136,7 @@ public class PaymentInfoAcitivity extends Activity {
                     String number = "**** **** **** " + scannedCard.getLastFourDigits();
                     String type = scannedCard.getCardBrand();
                     String name = scannedCard.getCardholderName();
+                    cardAdapter.removeCard(0);
                     cardAdapter.addCard(type, number, name, exp);
                 } else {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -158,16 +159,24 @@ public class PaymentInfoAcitivity extends Activity {
                     String name = scannedCard.cardholderName;
 
                     String type;
-                    String typeID = scannedCard.cardNumber.substring(0,4);
-                    switch(typeID){
-                        case "4724":
-                            type = "Visa Debit";
-                            break;
-                        case "4520":
-                            type = "Visa Credit";
-                            break;
-                        default: type = "NA";
+                    int typeID[] = new int[4];
+                    for(int i = 0; i < 4; i++){
+                        typeID[i] = Integer.parseInt("" + scannedCard.cardNumber.charAt(i));
                     }
+                    if (typeID[0] == 4) {
+                        type = "Visa";
+                    } else if(typeID[0] == 3 && typeID[1] == 7){
+                        type = "Amex";
+                    } else if(typeID[0] == 5 && typeID[1] <= 5 && typeID[1] >= 1){
+                        type = "Mastercard";
+                    } else if(typeID[0] == 3 && typeID[1] == 0 && typeID[2] <= 5 && typeID[2] >= 0){
+                        type = "Diner's Club";
+                    } else if(typeID[0] == 3 && typeID[1] == 6 || typeID[1] == 8){
+                        type = "Diner's Club";
+                    } else {
+                        type = "NA";
+                    }
+                    cardAdapter.removeCard(0);
                     cardAdapter.addCard(type, number, name, exp);
                 } else {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
