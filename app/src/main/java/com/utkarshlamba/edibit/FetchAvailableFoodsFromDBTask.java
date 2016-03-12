@@ -52,9 +52,6 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
             JSONArray foodItems =  new JSONArray(stringBuilder.toString());
 
 
-
-
-
             for (int i = 0; i<foodItems.length(); i++){
 
                 JSONObject obj = foodItems.getJSONObject(i);
@@ -98,6 +95,8 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
             Log.e("DataFetch", com.utkarshlamba.edibit.Application.foodItemsList.get(i).getFoodName());
         }
         //FAQFragment.adapter.notifyDataSetChanged();
+        AvailableFoodsFragment.adapter.notifyDataSetChanged();
+
         Log.e("FetchDataFromDBTask", "datasetnotified");
     }
 }

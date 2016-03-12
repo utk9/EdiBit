@@ -32,9 +32,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".PostFoodFragment"/>
+
         <application>
             <activity android:name="io.triangle.reader.ScanActivity" />
         </application>
+        <activity
+            android:name=".PaymentInfoAcitivity"
+            android:label="@string/app_name" >
+        </activity>
+
     </application>
 
 </manifest>

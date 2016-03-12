@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                     fragment = new AvailableFoodsFragment();
                     //toolbarTitle.setText("Wikipedia");
+                    fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 } else if (position == 1) {
                     //fragment = new PostFoodFragment();
                     Intent i = new Intent(getApplicationContext(), PostFoodFragment.class);
@@ -93,16 +94,16 @@ public class MainActivity extends AppCompatActivity {
                     //toolbarTitle.setText("Ask Question");
                 }
                 /**
-                else {
-                    if (isNetworkAvailable()) {
-                        fragment = new FAQFragment();
-                        toolbarTitle.setText("Helpful Questions");
-                    } else {
-                        Toast.makeText(getApplicationContext(),
-                                "This feature is only available with an network connection",
-                                Toast.LENGTH_LONG).show();
-                    }
-                }
+                 else {
+                 if (isNetworkAvailable()) {
+                 fragment = new FAQFragment();
+                 toolbarTitle.setText("Helpful Questions");
+                 } else {
+                 Toast.makeText(getApplicationContext(),
+                 "This feature is only available with an network connection",
+                 Toast.LENGTH_LONG).show();
+                 }
+                 }
                  */
                 if (fragment != null) {
                     fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
@@ -125,12 +126,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        //REMOVE THIS
-        Intent intent = new Intent(this, PaymentInfoAcitivity.class);
-        startActivity(intent);
-
 
 
     }

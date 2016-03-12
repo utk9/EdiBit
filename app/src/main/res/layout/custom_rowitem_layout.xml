@@ -25,7 +25,7 @@
             android:layout_centerVertical="true">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/title_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="title"
@@ -33,13 +33,13 @@
                 android:padding="2dp"
                 android:textColor="#33CC33" />
             <TextView
-                android:id="@+id/time_remaining"
+                android:id="@+id/time_remaining_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
                 android:text="time_remaining" />
             <TextView
-                android:id="@+id/tags"
+                android:id="@+id/tags_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="2dp"
