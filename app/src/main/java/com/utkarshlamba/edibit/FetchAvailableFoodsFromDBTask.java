@@ -94,9 +94,9 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
 
-        for (int i = 0; i< com.utkarshlamba.edibit.Application.foodItemsList.size(); i++){
-            Log.e("DataFetch", com.utkarshlamba.edibit.Application.foodItemsList.get(i).getFoodName());
-        }
+//        for (int i = 0; i< com.utkarshlamba.edibit.Application.foodItemsList.size(); i++){
+//            Log.e("DataFetch", com.utkarshlamba.edibit.Application.foodItemsList.get(i).getFoodName());
+//        }
         //FAQFragment.adapter.notifyDataSetChanged();
         Log.e("FetchDataFromDBTask", "datasetnotified");
     }

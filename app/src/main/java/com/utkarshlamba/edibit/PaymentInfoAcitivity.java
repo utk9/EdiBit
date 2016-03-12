@@ -15,6 +15,8 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+import io.card.payment.CardIOActivity;
+import io.card.payment.CreditCard;
 import io.triangle.reader.PaymentCard;
 import io.triangle.reader.ScanActivity;
 
@@ -22,6 +24,7 @@ import io.triangle.reader.ScanActivity;
 public class PaymentInfoAcitivity extends Activity {
 
     public static int TRIANGLE_REQUEST_CODE = 1000;
+    public static int CARD_IO_REQUEST_CODE = 1001;
 
     RecyclerView cardRecyclerView;
     CreditCardAdapter cardAdapter;
@@ -46,8 +49,6 @@ public class PaymentInfoAcitivity extends Activity {
 
         cardRecyclerView.setLayoutManager(layoutManager);
         cardRecyclerView.setAdapter(cardAdapter);
-
-
 
     }
 
@@ -112,7 +113,17 @@ public class PaymentInfoAcitivity extends Activity {
     }
 
     public void cameraClicked(View v){
-
+        try{
+            Intent cameraIntent = new Intent(this, CardIOActivity.class);
+            cameraIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_EXPIRY,true);
+            cameraIntent.putExtra(CardIOActivity.EXTRA_REQUIRE_CARDHOLDER_NAME, true);
+            startActivityForResult(cameraIntent, CARD_IO_REQUEST_CODE);
+        } catch (Exception e){
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setMessage("Error occurred when accessing camera.  Check if device camera is working");
+            alertDialog.setNegativeButton("Ok", null);
+            alertDialog.show();
+        }
     }
 
     @Override
@@ -124,7 +135,6 @@ public class PaymentInfoAcitivity extends Activity {
                     String exp = scannedCard.getExpiryDate().getMonth() + "/" + scannedCard.getExpiryDate().getYear();
                     String number = "**** **** **** " + scannedCard.getLastFourDigits();
                     String type = scannedCard.getCardBrand();
-
                     String name = scannedCard.getCardholderName();
                     cardAdapter.addCard(type, number, name, exp);
                 } else {
@@ -133,6 +143,39 @@ public class PaymentInfoAcitivity extends Activity {
                     alertDialog.setNegativeButton("Ok", null);
                     alertDialog.show();
                  }
+            } else {
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                alertDialog.setMessage("Card scan aborted");
+                alertDialog.setNegativeButton("Ok", null);
+                alertDialog.show();
+            }
+        } else if(requestCode == CARD_IO_REQUEST_CODE){
+            if(intent != null && intent.hasExtra(CardIOActivity.EXTRA_SCAN_RESULT)){
+                CreditCard scannedCard = intent.getParcelableExtra(CardIOActivity.EXTRA_SCAN_RESULT);
+                if(scannedCard.cardholderName != null && scannedCard.cardNumber != null && scannedCard.isExpiryValid()){
+                    String exp = scannedCard.expiryMonth + "/" + scannedCard.expiryYear;
+                    String number = "**** **** **** " + scannedCard.cardNumber.substring(scannedCard.cardNumber.length() - 4);
+                    String name = scannedCard.cardholderName;
+
+                    String type;
+                    String typeID = scannedCard.cardNumber.substring(0,4);
+                    switch(typeID){
+                        case "4724":
+                            type = "Visa Debit";
+                            break;
+                        case "4520":
+                            type = "Visa Credit";
+                            break;
+                        default: type = "NA";
+                    }
+                    cardAdapter.addCard(type, number, name, exp);
+                } else {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                    alertDialog.setMessage("Invalid card information.  Please try again");
+                    alertDialog.setNegativeButton("Ok", null);
+                    alertDialog.show();
+                }
+
             } else {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setMessage("Card scan aborted");
