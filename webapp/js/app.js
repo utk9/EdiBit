@@ -77,8 +77,73 @@ $(document).ready(function(){
 		ic.init();
 	}]);
 
-	app.controller("UploadController", ['$http', function($http){
+	app.controller("UploadController", ['$state', function($state){
 		var uc = this;
+
+		uc.formSubmit = function(){
+			$("#wait").show();
+			var name = $("#foodName").val();
+			var description = $("#foodDescription").val();
+			var location = $("#foodLocation").val();
+			var price = $("#foodPrice").val();
+			var img = $("#foodImg").prop("files")[0];
+			var contact = $("#foodContact").val();
+			console.log(contact);
+			if (name == "" || description == "" || location == "" || price == "" || contact == "" || img == "" || $('#foodImg').val() == "")
+			{
+				$("#feedback").show();
+				return;
+			} 
+			
+			var success = 0;
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{
+				xmlhttp = new XMLHttpRequest();
+			}
+			else
+			{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			xmlhttp.onreadystatechange=function()
+			{
+				if(xmlhttp.readyState==0)
+				{
+					console.log("not initialized");
+				}
+				if(xmlhttp.readyState==1)
+				{
+					console.log("connection established");
+				}
+				
+				if(xmlhttp.readyState==2)
+				{
+					console.log("request received");
+				}
+				
+				if(xmlhttp.readyState==3)
+				{
+					console.log("processing request");
+				}
+				if(xmlhttp.readyState==4)
+				{
+					var idR = xmlhttp.responseText;
+					$("#wait").hide();
+					$state.go("info", {"id": idR});
+				}
+				
+			}
+			var formData = new FormData();
+			formData.append('file', img);
+			formData.append('name', name);
+			formData.append('description', description);
+			formData.append('location', location);
+			formData.append('price', price);
+			formData.append('contact', contact);
+			xmlhttp.open("POST", "php/addFood.php", true);
+			xmlhttp.send(formData);
+		};
 
 	}]);
 
