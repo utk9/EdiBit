@@ -51,7 +51,7 @@
             android:id="@+id/description_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price: $description_price"
+
             android:padding="1dp"
             android:textSize="16dp"
             android:layout_marginLeft="25dp"
@@ -74,8 +74,6 @@
             android:textSize="16dp"
             android:layout_marginLeft="25dp"
             android:layout_marginBottom="1dp"/>
-
-
 
     </LinearLayout>
 </ScrollView>
