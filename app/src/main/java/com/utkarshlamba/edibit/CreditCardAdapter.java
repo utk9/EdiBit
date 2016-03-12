@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class CreditCardAdapter extends RecyclerView.Adapter<CreditCardAdapter.ViewHolder>{
 
-    public static int TRIANGLE_REQUEST_CODE = 1000;
+
 
     ArrayList<String[]> data;
 
@@ -75,8 +75,7 @@ public class CreditCardAdapter extends RecyclerView.Adapter<CreditCardAdapter.Vi
                 popup.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        data.remove(index);
-                        notifyDataSetChanged();
+                        removeCard(index);
                     }
                 });
                 popup.setNegativeButton("No", null);
@@ -98,5 +97,12 @@ public class CreditCardAdapter extends RecyclerView.Adapter<CreditCardAdapter.Vi
         String[] data = {type,number,name,exp};
         this.data.add(data);
         notifyDataSetChanged();
+    }
+
+    public void removeCard(int i){
+        if(i < getItemCount()){
+            data.remove(i);
+            notifyDataSetChanged();
+        }
     }
 }

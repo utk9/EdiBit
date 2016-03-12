@@ -1,17 +1,18 @@
 package com.utkarshlamba.edibit;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+
+import com.paypal.android.sdk.payments.PayPalConfiguration;
+import com.paypal.android.sdk.payments.PayPalService;
 
 import java.util.ArrayList;
 
@@ -20,60 +21,56 @@ import io.card.payment.CreditCard;
 import io.triangle.reader.PaymentCard;
 import io.triangle.reader.ScanActivity;
 
-
-public class PaymentInfoAcitivity extends Activity {
+public class PayActivity extends AppCompatActivity {
 
     public static int TRIANGLE_REQUEST_CODE = 1000;
     public static int CARD_IO_REQUEST_CODE = 1001;
 
-    RecyclerView cardRecyclerView;
+    public static String EXTRA_COST = "Cost";
+    public static String EXTRA_FOOD = "Food";
+
+    TextView cost,food;
+
+    ArrayList<String[]> card;
+    RecyclerView recyclerView;
     CreditCardAdapter cardAdapter;
-    ArrayList<String[]> cardData;
+
+    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_NO_NETWORK;
+
+    private static final String CONFIG_CLIENT_ID = "credential from developer.paypal.com";
+
+    private static PayPalConfiguration config = new PayPalConfiguration()
+            .environment(CONFIG_ENVIRONMENT)
+            .clientId(CONFIG_CLIENT_ID);
+                    // The following are only used in PayPalFuturePaymentActivity.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_info_acitivity);
-
-        String test1[] = {"Visa Debit", "**** **** **** 1234", "Jeffrey Seto", "10/18"};
-        String test2[] = {"Visa Credit", "**** **** **** 0420", "Billy Bob", "10/22"};
-
-        cardData = new ArrayList<>();
-        cardData.add(test1);
-        cardData.add(test2);
-
-        cardRecyclerView = (RecyclerView) findViewById(R.id.creditCardRecyclerView);
-        cardAdapter = new CreditCardAdapter(cardData);
+        setContentView(R.layout.activity_pay);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView = (RecyclerView) findViewById(R.id.payRecyclerView);
+        card = new ArrayList();
+        cardAdapter = new CreditCardAdapter(card);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(cardAdapter);
 
-        cardRecyclerView.setLayoutManager(layoutManager);
-        cardRecyclerView.setAdapter(cardAdapter);
+        cost = (TextView) findViewById(R.id.costText);
+        food = (TextView) findViewById(R.id.foodText);
+
+        Bundle bundle = getIntent().getExtras();
+        String foodString =  bundle.get(EXTRA_FOOD).toString();
+        String costString = bundle.get(EXTRA_COST).toString();
+
+        cost.setText("Total Cost: $" + costString);
+        food.setText("Dish: " + foodString);
+
+        Intent paypalService = new Intent(this, PayPalService.class);
+        paypalService.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
+
 
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_payment_info_acitivity, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
 
     public void nfcClicked(View v){
         NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -85,22 +82,22 @@ public class PaymentInfoAcitivity extends Activity {
             alertDialog.setTitle("NFC Sensor Turned Off");
             alertDialog.setMessage("In order to use this application, the NFC sensor must be turned on. Do you wish to turn it on?");
             alertDialog.setPositiveButton("Go to Settings", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i)
-                        {
-                            // Send the user to the settings page and hope they turn it on
-                            if (android.os.Build.VERSION.SDK_INT >= 16)
-                            {
-                                startActivity(new Intent(android.provider.Settings.ACTION_NFC_SETTINGS));
-                            }
-                            else
-                            {
-                                startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
-                            }
-                        }
-                    });
-                    alertDialog.setNegativeButton("Do Nothing", null);
-                    alertDialog.show();
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i)
+                {
+                    // Send the user to the settings page and hope they turn it on
+                    if (android.os.Build.VERSION.SDK_INT >= 16)
+                    {
+                        startActivity(new Intent(android.provider.Settings.ACTION_NFC_SETTINGS));
+                    }
+                    else
+                    {
+                        startActivity(new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+                    }
+                }
+            });
+            alertDialog.setNegativeButton("Do Nothing", null);
+            alertDialog.show();
         }
 
         if (nfcAdapter != null && nfcAdapter.isEnabled())
@@ -126,7 +123,6 @@ public class PaymentInfoAcitivity extends Activity {
         }
     }
 
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent){
         if(requestCode == TRIANGLE_REQUEST_CODE){
             if(resultCode == ScanActivity.RESULT_OK) {
@@ -143,7 +139,7 @@ public class PaymentInfoAcitivity extends Activity {
                     alertDialog.setMessage("Card brand or type not supported.  Please try another method");
                     alertDialog.setNegativeButton("Ok", null);
                     alertDialog.show();
-                 }
+                }
             } else {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
                 alertDialog.setMessage("Card scan aborted");

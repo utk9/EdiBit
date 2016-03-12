@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
                     //toolbarTitle.setText("Wolfram Alpha");
                 } else if (position == 2) {
 
-                    //Intent i = new Intent(getApplicationContext(), PaymentInfoActivity.class );
+                    Intent i = new Intent(getApplicationContext(), PaymentInfoAcitivity.class);
+                    startActivity(i);
                     //toolbarTitle.setText("Ask Question");
                 }
                 /**
