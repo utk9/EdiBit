@@ -1,0 +1,23 @@
+
+<div class="container-fluid">
+	<p class="center-text" id="searchWait">Please wait...</p>
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="center-text">{{info.infoData.name}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<img src="img/jumbotron.jpg" class="img-info" />
+			<h5>{{info.infoData.username}}</h5>
+		</div>
+		<div class="col-md-8">
+			<p>{{info.infoData.description}}</p>
+			<p>{{info.infoData.location}} - {{info.infoData.time}}</p>
+		</div>
+	</div>
+	<div class="row center-text">
+		<h2>{{info.infoData.price | currency}}</h2>
+		<button>Buy</button>
+	</div>
+</div>
