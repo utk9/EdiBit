@@ -127,6 +127,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //REMOVE THIS
+        Intent intent = new Intent(this, PaymentInfoAcitivity.class);
+        startActivity(intent);
+
 
 
     }

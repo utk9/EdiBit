@@ -1,0 +1,35 @@
+
+<div class="container-fluid">
+	<div class="row searchDiv">
+		<div class="col-md-12">
+			<form class="form-horizontal">
+				<div class="form-group">	
+					<label for="searchInput" class="col-sm-2 control-label">Search: </label>
+					<div class="col-sm-7">
+						<input type="text" ng-model="searchQuery" class="form-control" id="searchInput" placeholder="Pad Thai, Soup, Sandwiches">
+					</div>
+					<button ui-sref="search({query: searchQuery})" class="btn btn-default col-sm-1">Submit</button>
+					<button ui-sref="search({query: ''})" class="btn btn-default col-sm-1">Browse All</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+	<p class="center-text" id="searchWait">Please wait...</p>
+	<div class="row entry-food" ng-repeat="food in search.foodData">
+		<a ui-sref="info({id: food.id})">
+			<div class="col-md-4">
+				<h2>{{food.name}}</h2>
+				<img src="img/jumbotron.jpg" class="img-food"/>
+				<h5>{{food.username}}</h5>
+			</div>
+			<div class="col-md-7">
+				<p>{{food.description}}</p>
+				<p>{{food.location}} - {{food.time}}</p>
+			</div>
+			<div class="col-md-1">
+				{{food.price | currency}}
+			</div>
+		</a>
+	</div>
+</div>

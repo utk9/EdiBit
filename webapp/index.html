@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodApp">
+<head>    
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>Food App</title>
+
+	<meta name="description" content="Find delicious meals near you all at cheap prices, and sell your extra food for extra cash.">
+
+    <!--open graph-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Food App" />
+    <meta property="og:site_name" content="Food App - Find delicious meals near you all at cheap prices, and sell your extra food for extra cash." />
+    <meta property="og:url" content="http://www.foodapp.xyz/" />
+    <meta property="og:description" content="Find delicious meals near you all at cheap prices, and sell your extra food for extra cash." />
+
+	<!-- jquery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+	<!--Angular-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+
+	<!--Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- main -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<link href="css/main.css" rel="stylesheet">																					
+</head>
+<body>
+
+<div class="navbar navbar-inverse">
+	<div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dropdown-menu" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a ui-sref="home" class="navbar-brand" href="#">Food App</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="dropdown-menu">
+	      <ul class="nav navbar-nav">
+	        <li><a ui-sref="about">About</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a ui-sref="upload">Upload</a></li>
+	        <li><a ui-sref="contact">Contact</a></li>
+	      </ul>
+	    </div>
+  	</div>
+</div>
+
+<div class="wrapper">
+	<div ui-view></div>
+</div>
+</body>
+</html>
