@@ -34,29 +34,37 @@
 				</div>
 				<div class="form-group">
 					<label for="foodImg" class="col-sm-2 control-label">Picture</label>
-					<div class="col-sm-3">
+					<div class="col-sm-2">
 						<input type="file" name="img" onchange="readURL(this);" accept="image/*" class="form-control" id="foodImg">
 					</div>
 					<label for="foodContact" class="col-sm-1 control-label">Contact</label>
-					<div class="col-sm-6">
+					<div class="col-sm-3">
 						<input type="text" name="contact" class="form-control" id="foodContact" placeholder="(123) 234-1234 / john@doe.com">
+					</div>
+					<label for="foodTime" class="col-sm-1 control-label">Date/Time Cooked</label>
+					<div class="col-sm-3">
+						<input type="text" name="time" class="form-control" id="foodTime" placeholder="Oct. 4 4:40PM">
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-sm-offset-2 col-sm-3">
 				  		<div style="
 							background:url('img/noimage.jpg') no-repeat center;
 							background-size:cover;
 							 width:150px;
 							 height:150px;
-							 border: 1px solid white;
-							 border-radius:75px;" id="preview"></div>
+							 border: 1px solid gray;
+							 border-radius:75px;" id="preview">
 						</div>
+					</div>
+					<label for="foodTags" class="col-sm-1 control-label">Tags:</label>
+					<div class="col-sm-6">
+						<textarea style="resize: vertical" name="tags" class="form-control" id="foodTags" placeholder="Select a picture and we'll auto fill this part :)" rows="6"></textarea>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-				  		<button type="submit" class="btn btn-default" ng-click="upload.formSubmit()">Upload</button>
+					<div class="col-sm-offset-6 col-sm-6">
+				  		<button type="submit" class="btn btn-warning" ng-click="upload.formSubmit()">Upload</button>
 						<p id="feedback" style="display:none; color:red">Please fill out all fields.</p>
 					</div>
 				</div>
