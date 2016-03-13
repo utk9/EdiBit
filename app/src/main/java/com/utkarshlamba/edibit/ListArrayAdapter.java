@@ -37,6 +37,7 @@ public class ListArrayAdapter extends ArrayAdapter<String> {
         ImageView imageView = (ImageView) rowView.findViewById(R.id.list_item_logo);
         textView.setText(values[position]);
 
+
         // Change icon based on name
         String s = values[position];
 /*

@@ -73,6 +73,7 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
                 for (int m=0; m<list.length();m++){
                     tags+=list.get(m)+", ";
                 }
+                tags = tags.substring(0, tags.length() - 2);
 
                 com.utkarshlamba.edibit.Application.foodItemsList.add(
                         new FoodItem(foodName, userName, description, location, contactInfo, price,

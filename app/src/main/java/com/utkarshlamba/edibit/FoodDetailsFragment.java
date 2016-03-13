@@ -36,9 +36,9 @@ public class FoodDetailsFragment extends Fragment {
 
         descriptionTitle.setText(Application.foodItemsList.get(pos).getFoodName());
         descriptionDetails.setText(Application.foodItemsList.get(pos).getDescription());
-        contactTextView.setText(Application.foodItemsList.get(pos).getContactInfo());
-        timeTextView.setText(Application.foodItemsList.get(pos).getTimeCooked());
-        priceTextView.setText(Application.foodItemsList.get(pos).getPrice());
-        tagsTextView.setText(Application.foodItemsList.get(pos).getTags());
+        contactTextView.setText("Contact: " + Application.foodItemsList.get(pos).getContactInfo());
+        timeTextView.setText("Time created: " + Application.foodItemsList.get(pos).getTimeCooked());
+        priceTextView.setText("Price: $" + Application.foodItemsList.get(pos).getPrice());
+        tagsTextView.setText("Tags: " + Application.foodItemsList.get(pos).getTags());
     }
 }

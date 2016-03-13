@@ -2,102 +2,102 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Jeffrey\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.1.2\7052283359001bb108753cb0583a887d3bf94c82\okhttp-3.1.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="7052283359001bb108753cb0583a887d3bf94c82">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\okhttp-3.1.2-0eb40c54599fba7f0b25540f936ae78b5ad2f5ac.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\io.card\android-sdk\5.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e3fa9adf2238ba0a4160f56d69a3cc5a23f9a98b">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-37c756491c16e193e270fd41fc742c0073b3f960.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-54173dcf68963a9b68f78ea7ddfa009888221e1a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\okio-1.6.0-361cc16e759f92afa91f9ac37e951d39f2b15922.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-6a87c1622dd1bc868bb9efbab5295a83b5844ca5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-cf49a12a8214f3b54000510133e9222f6a750e52.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\libs\httpclient-4.5.2.jar"
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpclient-4.5.2.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="733db77aa8d9b2d68015189df76ab06304406e50">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\httpclient-4.5.2-4be2e4eb8ccedc8685404a387169d1beb6843256.jar" />
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpclient-4.5.2-ed21e04b4320d59c5b676e41ec86056666c4f129.jar" />
     </item>
     <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-e486a522f0ce070c68ede0c5b04d78a18268cd06.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\libs\triangle.io-1.0.9.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2662a11bed20f8d098f1aa3dc04759a96d6a7ea8">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\triangle.io-1.0.9-5f5fbd3e864bb279202db54d0a234e968f221d9f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-3a493fd17f6f5dfac5ffb1133e601c9dc11f3267.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.paypal.sdk\paypal-android-sdk\2.13.3\jars\classes.jar"
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.paypal.sdk/paypal-android-sdk/2.13.3/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="027b93c882c1cfa279bd92bf0ca6ca12be3f8717">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-cb84592b19b11756152fe454025e204e848f69b5.jar" />
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-9f604713bc1f84895d052f47c97b0b5ea1318e00.jar" />
     </item>
     <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\libs\httpcore-4.4.4.jar"
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\httpcore-4.4.4-d13cff0b4d285ecf07b14d24339f409b3804fc15.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-a5f21085d535ce7007c16cd88e94f8a25c7767aa.jar" />
     </item>
     <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/triangle.io-1.0.9.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2662a11bed20f8d098f1aa3dc04759a96d6a7ea8">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/triangle.io-1.0.9-df07ff81137c841ba833ed08b3f7c7176c7aebe9.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-b0c4c5e95eb92000fd72ba7ef984d50ce24b9267.jar" />
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-caff1dc53a489c8cf9bdf03df689eb36df069020.jar" />
     </item>
     <item
-        jar="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jar="/Users/melissali/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-c3a08f13dfabed338aa2e83a231b3b7c83fe33be.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-98975d993789ec5d32321c4fa48bcf67495f16f0.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/io.card/android-sdk/5.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e3fa9adf2238ba0a4160f56d69a3cc5a23f9a98b">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-8dc95d54ccc39192bcb34f156e54bf75fed42112.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpcore-4.4.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpcore-4.4.4-5669da1a6d10eaddf052d6eb06dd2e58f15ca7e8.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-aa6eee016e537154466f84054da7b03ddce7b8c3.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="C:\Users\Jeffrey\Documents\GitHub\EdiBit\app\build\intermediates\pre-dexed\debug\classes-c1471fe91dec7e846925a513c6797c303d38113e.jar" />
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-cccd5b5e9a59c60260da92a0dff1d2557166fe9c.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.1.2/7052283359001bb108753cb0583a887d3bf94c82/okhttp-3.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okhttp-3.1.2-60016638a3f50335c5781810d13de76ada15917e.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okio-1.6.0-de78819457e4e76099361b4f6ada2f4348745898.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-8159702e5ba811e67aef9562fa78152fb1821bfc.jar" />
     </item>
 
 </items>
