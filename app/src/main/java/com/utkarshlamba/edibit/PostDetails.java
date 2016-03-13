@@ -40,7 +40,9 @@ import java.util.ArrayList;
 public class PostDetails extends Activity {
 
     String ba1;
-    public static final String URL = "http://www.edibit.org/php/addFood.php";
+    //public static final String URL = "http://www.edibit.org/php/addFood.php";
+
+    public static final String URL = "http://www.charliezhang.xyz/foodapp/php/addFood.php";
     String mCurrentPhotoPath;
 
     File imageFile;
@@ -194,8 +196,9 @@ public class PostDetails extends Activity {
                 builder.addTextBody("description", description);
                 builder.addTextBody("location", location);
                 builder.addTextBody("price", price);
-                builder.addTextBody("contactInfo", contactInfo);
+                builder.addTextBody("contact", contactInfo);
                 builder.addTextBody("timeCooked", timeCooked);
+                builder.addTextBody("tags", tags);
                 if(imageFile != null)
                 {
                     builder.addBinaryBody("file", imageFile);

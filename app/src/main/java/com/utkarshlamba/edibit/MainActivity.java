@@ -1,36 +1,23 @@
 package com.utkarshlamba.edibit;
 
-import android.app.Application;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -84,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                     //toolbarTitle.setText("Wikipedia");
                     fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 } else if (position == 1) {
-                    //fragment = new PostFoodFragment();
-                    Intent i = new Intent(getApplicationContext(), PostFoodFragment.class);
+                    //fragment = new PostFoodActivity();
+                    Intent i = new Intent(getApplicationContext(), PostFoodActivity.class);
                     startActivity(i);
                     //toolbarTitle.setText("Wolfram Alpha");
                 } else if (position == 2) {
@@ -95,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     //toolbarTitle.setText("Ask Question");
                 } else if (position == 3) {
                     Intent i = new Intent(getApplicationContext(), PayActivity.class);
+                    startActivity(i);
                 }
                 /**
                  else {

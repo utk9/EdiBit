@@ -43,7 +43,7 @@ import java.util.Date;
 
 
 
-public class PostFoodFragment extends Activity {
+public class PostFoodActivity extends Activity {
 
     Button btpic, btnup;
     String ba1;
@@ -56,6 +56,9 @@ public class PostFoodFragment extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_post_food_fragment);
+
+
+
 
 
         mImageView = (ImageView) findViewById(R.id.image_prev);
