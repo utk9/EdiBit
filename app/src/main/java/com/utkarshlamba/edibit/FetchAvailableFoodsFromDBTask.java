@@ -19,11 +19,17 @@ import java.util.ArrayList;
 /**
  * Created by utk on 16-03-12.
  */
-public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, String> {
+public class FetchAvailableFoodsFromDBTask extends AsyncTask<Void, Void, ArrayList<FoodItem>> {
+
+    CustomListAdapter adapter;
+
+    public FetchAvailableFoodsFromDBTask(CustomListAdapter adapter) {
+        this.adapter = adapter;
+    }
 
     @Override
-    protected String doInBackground(String... params) {
-
+    protected ArrayList<FoodItem> doInBackground(Void... params) {
+        ArrayList<FoodItem> items = new ArrayList<>();
         try{
             String link = new String("http://www.charliezhang.xyz/foodapp/php/getAll.php");
 
@@ -41,7 +47,6 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
                 stringBuilder.append(inputString);
             }
 
-            com.utkarshlamba.edibit.Application.foodItemsList.clear();
             //Log.e("FetchData", stringBuilder.toString());
 
 
@@ -75,7 +80,7 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
                 }
                 tags = tags.substring(0, tags.length() - 2);
 
-                com.utkarshlamba.edibit.Application.foodItemsList.add(
+                items.add(
                         new FoodItem(foodName, userName, description, location, contactInfo, price,
                                 timeCooked, imagePath, tags)
                 );
@@ -86,17 +91,19 @@ public class FetchAvailableFoodsFromDBTask extends AsyncTask<String, Void, Strin
         } catch (Exception e){
             Log.e("FetchDataFromDBTask", "exception");
         }
-        return null;
+        return items;
     }
 
-    protected void onPostExecute(String s) {
-        super.onPostExecute(s);
+    protected void onPostExecute(ArrayList<FoodItem> items) {
+        super.onPostExecute(items);
 
 //        for (int i = 0; i< com.utkarshlamba.edibit.Application.foodItemsList.size(); i++){
 //            Log.e("DataFetch", com.utkarshlamba.edibit.Application.foodItemsList.get(i).getFoodName());
 //        }
         //FAQFragment.adapter.notifyDataSetChanged();
-        AvailableFoodsFragment.adapter.notifyDataSetChanged();
+        com.utkarshlamba.edibit.Application.foodItemsList = items;
+        adapter.items = items;
+        adapter.notifyDataSetChanged();
 
         Log.e("FetchDataFromDBTask", "datasetnotified");
     }

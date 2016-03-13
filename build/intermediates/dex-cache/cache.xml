@@ -2,102 +2,109 @@
 <items version="2" >
 
     <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpclient-4.5.2.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="733db77aa8d9b2d68015189df76ab06304406e50">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpclient-4.5.2-ed21e04b4320d59c5b676e41ec86056666c4f129.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.paypal.sdk/paypal-android-sdk/2.13.3/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="027b93c882c1cfa279bd92bf0ca6ca12be3f8717">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-9f604713bc1f84895d052f47c97b0b5ea1318e00.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-a5f21085d535ce7007c16cd88e94f8a25c7767aa.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/triangle.io-1.0.9.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="2662a11bed20f8d098f1aa3dc04759a96d6a7ea8">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/triangle.io-1.0.9-df07ff81137c841ba833ed08b3f7c7176c7aebe9.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-caff1dc53a489c8cf9bdf03df689eb36df069020.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-c3a08f13dfabed338aa2e83a231b3b7c83fe33be.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-98975d993789ec5d32321c4fa48bcf67495f16f0.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/io.card/android-sdk/5.3.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e3fa9adf2238ba0a4160f56d69a3cc5a23f9a98b">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-8dc95d54ccc39192bcb34f156e54bf75fed42112.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpcore-4.4.4.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpcore-4.4.4-5669da1a6d10eaddf052d6eb06dd2e58f15ca7e8.jar" />
-    </item>
-    <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-aa6eee016e537154466f84054da7b03ddce7b8c3.jar" />
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-8bf2e1147dcb9c2f83296dd42e2b69390bd5dd04.jar" />
     </item>
     <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.paypal.sdk/paypal-android-sdk/2.13.3/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-cccd5b5e9a59c60260da92a0dff1d2557166fe9c.jar" />
+        sha1="027b93c882c1cfa279bd92bf0ca6ca12be3f8717">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-b1b04222349bc7ea07ab454053211a9697a0ac16.jar" />
     </item>
     <item
-        jar="/Users/melissali/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.1.2/7052283359001bb108753cb0583a887d3bf94c82/okhttp-3.1.2.jar"
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/io.card/android-sdk/5.3.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="7052283359001bb108753cb0583a887d3bf94c82">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okhttp-3.1.2-60016638a3f50335c5781810d13de76ada15917e.jar" />
+        sha1="e3fa9adf2238ba0a4160f56d69a3cc5a23f9a98b">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-0c469028dde61f2441ebd56e698e064638d9bacc.jar" />
     </item>
     <item
-        jar="/Users/melissali/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/libs/httpclient-4.3.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okio-1.6.0-de78819457e4e76099361b4f6ada2f4348745898.jar" />
+        sha1="0ec13f6423eb6d5858e229939a2bc118473ef94c">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpclient-4.3.1-4745ba04f7db29e8d439e46d0f2781bc4e3d40e3.jar" />
     </item>
     <item
-        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-b46e914419a04fb743954dc2c7871e7dbe236687.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-0343a2406a11ab09c5cdd7bb3825438016953d3e.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-8159702e5ba811e67aef9562fa78152fb1821bfc.jar" />
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-31e62d3ed94ef792d4ffba43b665c5f758a3c88c.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-72dd48e7f092b6c5b04e8d31fe6267d937e86161.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/libs/triangle.io-1.0.9.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2662a11bed20f8d098f1aa3dc04759a96d6a7ea8">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/triangle.io-1.0.9-63100da5726269adaee0da1300558efc49f33125.jar" />
+    </item>
+    <item
+        jar="/Users/utk/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okio-1.6.0-12b61d3e00ba706bb5163f1c58535cab190aeac1.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/libs/httpmime-4.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f7899276dddd01d8a42ecfe27e7031fcf9824422">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpmime-4.3.1-449f0b98690134754986e6fbc9050f8a1b6833c1.jar" />
+    </item>
+    <item
+        jar="/Users/utk/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-361a321052b863b660d7f326b6302c772c51d517.jar" />
+    </item>
+    <item
+        jar="/Users/utk/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.1.2/7052283359001bb108753cb0583a887d3bf94c82/okhttp-3.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/okhttp-3.1.2-a1ab024e76235e7e4c4ef233cd595aa926911e7d.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/libs/httpcore-4.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98e2eefcf524f757188f172642ecf5e2c7421947">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpcore-4.3.1-73e0bc5d24e15351d00dc96f4a4fa8ba23f1ed66.jar" />
+    </item>
+    <item
+        jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-6a0219b91e7c286e3afed620a1327eb6ee29a2f5.jar" />
     </item>
 
 </items>
