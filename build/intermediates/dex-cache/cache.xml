@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< Updated upstream
         jar="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -105,6 +106,27 @@
         revision="23.0.1"
         sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
         <dex dex="/Users/utk/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/classes-6a0219b91e7c286e3afed620a1327eb6ee29a2f5.jar" />
+=======
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpmime-4.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f7899276dddd01d8a42ecfe27e7031fcf9824422">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpmime-4.3.1-12808a99c09bdfa8df48ae4414669fa9463199b6.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpclient-4.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0ec13f6423eb6d5858e229939a2bc118473ef94c">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpclient-4.3.1-2854b42169a1c78a2e01843ca390b1764825c160.jar" />
+    </item>
+    <item
+        jar="/Users/melissali/AndroidStudioProjects/EdiBit/app/libs/httpcore-4.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98e2eefcf524f757188f172642ecf5e2c7421947">
+        <dex dex="/Users/melissali/AndroidStudioProjects/EdiBit/app/build/intermediates/pre-dexed/debug/httpcore-4.3.1-a0199537100096970ad827bc84f1f53fed8fc373.jar" />
+>>>>>>> Stashed changes
     </item>
 
 </items>

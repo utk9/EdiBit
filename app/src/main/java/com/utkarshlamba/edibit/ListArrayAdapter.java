@@ -40,19 +40,17 @@ public class ListArrayAdapter extends ArrayAdapter<String> {
 
         // Change icon based on name
         String s = values[position];
-/*
+
         System.out.println(s);
 
-        if (s.equals("Wikipedia")) {
-            imageView.setImageResource(R.drawable.wikipedia128);
-        } else if (s.equals("Wolfram Alpha")) {
-            imageView.setImageResource(R.drawable.wolfram300);
-        } else if (s.equals("Ask a question")) {
-            imageView.setImageResource(R.drawable.bluequestionmark);
-        } else {
-            imageView.setImageResource(R.drawable.helpfulquestions);
+        if (s.equals("Available foods")) {
+            imageView.setImageResource(R.drawable.available_icon);
+        } else if (s.equals("Post Food")) {
+            imageView.setImageResource(R.drawable.post_icon);
+        } else if (s.equals("Payment Info")){
+            imageView.setImageResource(R.drawable.card_icon);
         }
-        */
+
 
         return rowView;
     }
