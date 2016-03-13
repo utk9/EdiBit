@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), PaymentInfoAcitivity.class);
                     startActivity(i);
                     //toolbarTitle.setText("Ask Question");
+                } else if (position == 3) {
+                    Intent i = new Intent(getApplicationContext(), PayActivity.class);
                 }
                 /**
                  else {

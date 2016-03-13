@@ -5,5 +5,6 @@
         <item>Available foods</item>
         <item>Post Food</item>
         <item>Payment Info</item>
+        <item>Receive Payment</item>
     </string-array>
 </resources>

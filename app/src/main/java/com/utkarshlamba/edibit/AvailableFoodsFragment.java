@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class AvailableFoodsFragment extends Fragment {
 
-    public static CustomListAdapter adapter;
+
     public static ListView listView;
 
     @Override
@@ -37,7 +37,7 @@ public class AvailableFoodsFragment extends Fragment {
             list.add(Application.foodItemsList.get(i).getFoodName());
             Log.e("dfd", Application.foodItemsList.get(i).getFoodName());
         }
-        adapter = new CustomListAdapter(getActivity(), Application.foodItemsList, list);
+        CustomListAdapter adapter = new CustomListAdapter(getActivity(), Application.foodItemsList, list);
 
 
         listView.setAdapter(adapter);
@@ -50,7 +50,7 @@ public class AvailableFoodsFragment extends Fragment {
             }
         });
 
-        new FetchAvailableFoodsFromDBTask().execute();
+        new FetchAvailableFoodsFromDBTask(adapter).execute();
 
     }
 

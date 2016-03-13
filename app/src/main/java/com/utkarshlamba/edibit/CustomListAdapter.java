@@ -45,8 +45,8 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         TextView tagsTextView = (TextView) v.findViewById(R.id.tags_textView);
 
 
-        titleTextView.setText(items.get(position).getFoodName());
-        tagsTextView.setText(items.get(position).getTags());
+        titleTextView.setText(com.utkarshlamba.edibit.Application.foodItemsList.get(position).getFoodName());
+        tagsTextView.setText(com.utkarshlamba.edibit.Application.foodItemsList.get(position).getTags());
 
         return v;
     }
