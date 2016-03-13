@@ -1,37 +1,45 @@
-<div class="container-fluid">
-	<div class="row uploadDiv">
+<div class="container-fluid uploadDiv">
+	<div id="wait">
+		<h2>Please wait...</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-12 center-text">
+			<h1>Upload Your Food</h1>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-10">
-			<form class="form-horizontal">
+			<form class="form-horizontal" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="foodName" class="col-sm-2 control-label">Name</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="foodName" placeholder="Subs for Sale">
+						<input type="text" name="name" class="form-control" id="foodName" placeholder="Subs for Sale">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="foodDescription" class="col-sm-2 control-label">Description</label>
 					<div class="col-sm-10">
-						<textarea style="resize: vertical" class="form-control" id="foodDescription" rows="3"></textarea>
+						<textarea style="resize: vertical" name="description" class="form-control" id="foodDescription" rows="3"></textarea>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="foodLocation" class="col-sm-2 control-label">Location</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" id="foodLocation" placeholder="Waterloo, ON">
+						<input type="text" name="location" class="form-control" id="foodLocation" placeholder="Waterloo, ON">
 					</div>
 					<label for="foodPrice" class="col-sm-1 control-label">Price</label>
 					<div class="col-sm-2">
-						<input type="text" class="form-control" id="foodPrice" placeholder="6.99">
+						<input type="text" name="price" class="form-control" id="foodPrice" placeholder="6.99">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="foodImg" class="col-sm-2 control-label">Picture</label>
 					<div class="col-sm-3">
-						<input type="file" onchange="readURL(this);" accept="image/*" class="form-control" id="foodImg">
+						<input type="file" name="img" onchange="readURL(this);" accept="image/*" class="form-control" id="foodImg">
 					</div>
 					<label for="foodContact" class="col-sm-1 control-label">Contact</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="foodContact" placeholder="(123) 234-1234 / john@doe.com">
+						<input type="text" name="contact" class="form-control" id="foodContact" placeholder="(123) 234-1234 / john@doe.com">
 					</div>
 				</div>
 				<div class="form-group">
@@ -48,7 +56,8 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-				  		<button type="submit" class="btn btn-default">Upload</button>
+				  		<button type="submit" class="btn btn-default" ng-click="upload.formSubmit()">Upload</button>
+						<p id="feedback" style="display:none; color:red">Please fill out all fields.</p>
 					</div>
 				</div>
 			</form>

@@ -21,7 +21,7 @@ public class Application extends android.app.Application {
     public Application(){
 
         super();
-        foodItemsList = new ArrayList<FoodItem>();
+        foodItemsList = new ArrayList<>();
     }
 
     @Override
@@ -49,6 +49,7 @@ public class Application extends android.app.Application {
                                 ACCESS_KEY,      // Access Key
                                 SECRET_KEY, // Secret Key
                                 Application.this);
+                        System.out.println("initialized");
                     }
                     catch (Exception exception)
                     {
@@ -56,17 +57,6 @@ public class Application extends android.app.Application {
                     }
 
                     return null;
-                }
-
-                @Override
-                protected void onPostExecute(Void aVoid)
-                {
-                    super.onPostExecute(aVoid);
-
-                    if (this.exception != null)
-                    {
-                        // Do error handling if initialization was not successful
-                    }
                 }
             };
 

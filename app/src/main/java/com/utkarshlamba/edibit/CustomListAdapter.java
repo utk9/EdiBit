@@ -28,6 +28,7 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     public CustomListAdapter(Context context, ArrayList<FoodItem> foods, ArrayList<String> names) {
         super(context,R.layout.custom_rowitem_layout, names);
         this.context = context;
+        this.items = foods;
     }
 
     @Override
@@ -40,10 +41,9 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         }
 
         TextView titleTextView = (TextView) v.findViewById(R.id.title_textView);
-        if (titleTextView == null) {
-            Log.e("geefefe", "fefe");
-        }
+
         TextView tagsTextView = (TextView) v.findViewById(R.id.tags_textView);
+
 
         titleTextView.setText(items.get(position).getFoodName());
         tagsTextView.setText(items.get(position).getTags());
