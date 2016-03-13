@@ -1,5 +1,7 @@
 "use strict";
 
+var accesstoken;
+
 $(document).ready(function(){
 	$(".navbar a").on("click", function(){
 	   $(".nav").find(".active").removeClass("active");
@@ -80,6 +82,55 @@ $(document).ready(function(){
 	app.controller("UploadController", ['$state', function($state){
 		var uc = this;
 
+		uc.init = function(){
+			var clientid = "8qecVJDX4y7s4d2nRMxR8TswqS-Ihj-_a4WKTAeb";
+			var clientsecret = "KtCXP0xOg6H6VlTveptOUFzoE4qz4AP8r6tCE4vB";
+			var success = 0;
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{
+				xmlhttp = new XMLHttpRequest();
+			}
+			else
+			{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			xmlhttp.onreadystatechange=function()
+			{
+				if(xmlhttp.readyState==0)
+				{
+					console.log("not initialized");
+				}
+				if(xmlhttp.readyState==1)
+				{
+					console.log("connection established");
+				}
+				
+				if(xmlhttp.readyState==2)
+				{
+					console.log("request received");
+				}
+				
+				if(xmlhttp.readyState==3)
+				{
+					console.log("processing request");
+				}
+				if(xmlhttp.readyState==4)
+				{
+					var response = JSON.parse(xmlhttp.responseText);
+					accesstoken = response["access_token"];
+				}
+				
+			}
+			var formData = new FormData();
+			formData.append('client_id', clientid);
+			formData.append('client_secret', clientsecret);
+			formData.append('grant_type', "client_credentials");
+			xmlhttp.open("POST", "https://api.clarifai.com/v1/token/", true);
+			xmlhttp.send(formData);
+		};
+
 		uc.formSubmit = function(){
 			$("#wait").show();
 			var name = $("#foodName").val();
@@ -88,8 +139,9 @@ $(document).ready(function(){
 			var price = $("#foodPrice").val();
 			var img = $("#foodImg").prop("files")[0];
 			var contact = $("#foodContact").val();
-			console.log(contact);
-			if (name == "" || description == "" || location == "" || price == "" || contact == "" || img == "" || $('#foodImg').val() == "")
+			var tags = $("#foodTags").val();
+			var time = $("#foodTime").val();
+			if (time == " " || name == "" || description == "" || location == "" || price == "" || contact == "" || tags == "" || img == "" || $('#foodImg').val() == "")
 			{
 				$("#feedback").show();
 				return;
@@ -141,9 +193,13 @@ $(document).ready(function(){
 			formData.append('location', location);
 			formData.append('price', price);
 			formData.append('contact', contact);
+			formData.append('tags', tags);
+			formData.append('timeCooked', time);
 			xmlhttp.open("POST", "php/addFood.php", true);
 			xmlhttp.send(formData);
 		};
+
+		uc.init();
 
 	}]);
 
@@ -151,6 +207,7 @@ $(document).ready(function(){
 
 
 function readURL(input) {
+
 if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function (e) {
@@ -159,4 +216,55 @@ if (input.files && input.files[0]) {
     };
     reader.readAsDataURL(input.files[0]);
   }
+
+var success = 0;
+var xmlhttp;
+if (window.XMLHttpRequest)
+{
+	xmlhttp = new XMLHttpRequest();
+}
+else
+{
+	xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+xmlhttp.onreadystatechange=function()
+{
+	if(xmlhttp.readyState==0)
+	{
+		console.log("not initialized");
+	}
+	if(xmlhttp.readyState==1)
+	{
+		console.log("connection established");
+	}
+	
+	if(xmlhttp.readyState==2)
+	{
+		console.log("request received");
+	}
+	
+	if(xmlhttp.readyState==3)
+	{
+		console.log("processing request");
+	}
+	if(xmlhttp.readyState==4)
+	{
+		var tagsObj = JSON.parse(xmlhttp.responseText);	
+		var tags = tagsObj["results"][0]["result"]["tag"]["classes"];
+		var tagsString = "";
+		for(var i = 0; i < tags.length; i++)
+		{
+			if(i == tags.length - 1) tagsString += tags[i];
+			else tagsString += tags[i] + ", ";
+		}
+		$("#foodTags").val(tagsString);
+	}
+	
+}
+var formData = new FormData();
+formData.append('encoded_data', input.files[0]);
+xmlhttp.open("POST", " https://api.clarifai.com/v1/tag/", true);
+xmlhttp.setRequestHeader("Authorization", "Bearer " + accesstoken);
+xmlhttp.send(formData);
 }

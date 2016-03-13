@@ -10,6 +10,7 @@
 
     // Create connection 
     $conn = new mysqli($servername, $serverusername, $serverpassword, $database);
+    
     $data = "SELECT id, name, username, description, location, price, time, image, tags, contactInfo FROM Food";
     $result = $conn->query($data);
     if ($result->num_rows > 0) 
@@ -34,6 +35,7 @@
     else 
     {
         echo "";
+        return;
     }
     echo json_encode($json);
 

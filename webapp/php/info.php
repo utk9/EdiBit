@@ -10,7 +10,7 @@
 
     // Create connection 
     $conn = new mysqli($servername, $serverusername, $serverpassword, $database);
-    $data = "SELECT name, username, description, location, price, time, image, tags, contactInfo FROM Food WHERE id='$id'";
+    $data = "SELECT id, name, username, description, location, price, time, image, tags, contactInfo FROM Food WHERE id='$id'";
     $result = $conn->query($data);
     if ($result->num_rows > 0) 
     { 
