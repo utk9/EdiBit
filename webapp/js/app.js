@@ -74,8 +74,85 @@ $(document).ready(function(){
             		ic.infoData = data;
             		$("#searchWait").remove();
         		});
+    		Stripe.setPublishableKey('pk_test_tNGrujIVT9iwZIWnheYyETnA');
 
 		};
+
+		ic.pay = function(){
+			console.log("start");
+			var creditCard = $("#creditCard").val();
+			var cvc = $("#cvc").val();
+			var expMonth = $("#expMonth").val();
+			var expYear = $("#expYear").val();
+			var $form = $('#payment-form');
+
+			// Disable the submit button to prevent repeated clicks
+			$form.find('button').prop('disabled', true);
+
+			Stripe.card.createToken($form, ic.responseHandler);
+		};
+
+		ic.responseHandler = function(status, response){
+			var $form = $('#payment-form');
+
+			if (response.error) {
+				// Show the errors on the form
+				$form.find('.payment-errors').text(response.error.message);
+				$form.find('button').prop('disabled', false);
+			} else {
+				// token contains id, last4, and card type
+				var token = response.id;
+				var paymentAmount = ic.infoData.price;
+				var success = 0;
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				{
+					xmlhttp = new XMLHttpRequest();
+				}
+				else
+				{
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+
+				xmlhttp.onreadystatechange=function()
+				{
+					if(xmlhttp.readyState==0)
+					{
+						console.log("not initialized");
+					}
+					if(xmlhttp.readyState==1)
+					{
+						console.log("connection established");
+					}
+					
+					if(xmlhttp.readyState==2)
+					{
+						console.log("request received");
+					}
+					
+					if(xmlhttp.readyState==3)
+					{
+						console.log("processing request");
+					}
+					if(xmlhttp.readyState==4)
+					{
+						var response = xmlhttp.responseText;
+						if(response == "1")
+						{
+							alert("Your payment was successful");
+						}
+					}
+					
+				}
+				var formData = new FormData();
+				formData.append('stripeToken', token);
+				formData.append('paymentAmount', paymentAmount);
+				xmlhttp.open("POST", "php/stripePay.php", true);
+				xmlhttp.send(formData);
+			
+			}
+		};
+
 		ic.init();
 	}]);
 
@@ -132,7 +209,6 @@ $(document).ready(function(){
 		};
 
 		uc.formSubmit = function(){
-			$("#wait").show();
 			var name = $("#foodName").val();
 			var description = $("#foodDescription").val();
 			var location = $("#foodLocation").val();
@@ -146,6 +222,7 @@ $(document).ready(function(){
 				$("#feedback").show();
 				return;
 			} 
+			$("#wait").show();
 			
 			var success = 0;
 			var xmlhttp;

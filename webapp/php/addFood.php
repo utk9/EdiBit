@@ -7,15 +7,9 @@
     $serverpassword = $config["password"];
     $database = $config["database"];
 
-    if(isset($_POST["ImageName"])) //mobile upload
-    {
-    	$imgname = $_POST["ImageName"];
-    	$imgsrc = base64_decode($_POST["base64"]);
-    	$fp = fopen(__DIR__."/../userImg/".$imgname, 'w');
-    	$bytes = fwrite($fp, $imgsrc);
-    	fclose($fp);
-    }
-    else if(isset($_FILES["file"])) //web upload
+    error_log("message");
+
+    if(isset($_FILES["file"]))
     {
 		$uploaddir = __DIR__."/../userImg/";
         $uploadPartFile = strtolower(time() . "." . pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION));
